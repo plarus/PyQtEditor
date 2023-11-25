@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QAction
+from PyQt6.QtGui import QAction
 
 
 class Bookmark:

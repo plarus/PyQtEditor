@@ -1,13 +1,13 @@
 import sys
 from src.editor import Editor
-from PyQt5.QtWidgets import QApplication
+from PyQt6.QtWidgets import QApplication
 
 
 def main():
     app = QApplication(sys.argv)
     window = Editor()
     window.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
 
 
 if __name__ == '__main__':

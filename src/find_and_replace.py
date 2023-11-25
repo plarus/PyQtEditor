@@ -1,11 +1,11 @@
-from PyQt5.QtWidgets import QHBoxLayout,\
+from PyQt6.QtWidgets import QHBoxLayout,\
     QVBoxLayout,\
     QDialog,\
     QLineEdit,\
     QLabel, \
     QCheckBox, \
     QPushButton
-from PyQt5.QtCore import Qt
+from PyQt6.QtCore import Qt
 
 
 class FindAndReplace(QDialog):
@@ -28,7 +28,7 @@ class FindAndReplace(QDialog):
     def setup_ui(self):
         self.setWindowTitle("Replace text")
         self.setFixedSize(350, 180)
-        # self.setWindowModality(Qt.ApplicationModal)
+        # self.setWindowModality(Qt.WindowModality.ApplicationModal)
         self.setModal(False)
         self._find.setFixedWidth(160)
         self._replace.setFixedWidth(160)
@@ -50,13 +50,13 @@ class FindAndReplace(QDialog):
         # TEXT #
         label_find = QLabel()
         label_find.setText("Find:")
-        label_find.setAlignment(Qt.AlignRight)
+        label_find.setAlignment(Qt.AlignmentFlag.AlignRight)
         lay_input_text_1.addWidget(label_find)
         lay_input_text_1.addWidget(self._find)
 
         label_replace = QLabel()
         label_replace.setText("Replace:")
-        label_replace.setAlignment(Qt.AlignRight)
+        label_replace.setAlignment(Qt.AlignmentFlag.AlignRight)
         lay_input_text_2.addWidget(label_replace)
         lay_input_text_2.addWidget(self._replace)
 

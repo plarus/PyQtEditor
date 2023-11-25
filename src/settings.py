@@ -1,5 +1,5 @@
-from PyQt5.Qsci import QsciScintilla
-from PyQt5.QtGui import QColor
+from PyQt6.Qsci import QsciScintilla
+from PyQt6.QtGui import QColor
 import sys
 
 
@@ -20,7 +20,7 @@ class Settings:
     SCROLL_WIDTH = 1
 
     # WarpMode
-    WRAP_MODE = QsciScintilla.WrapCharacter
+    WRAP_MODE = QsciScintilla.WrapMode.WrapCharacter
 
     # Cursor
     CARET_LINE_VISIBLE = True

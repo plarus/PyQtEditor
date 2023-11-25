@@ -1,11 +1,11 @@
-from PyQt5.QtWidgets import QWidget, \
+from PyQt6.QtWidgets import QWidget, \
     QHBoxLayout,\
     QVBoxLayout,\
     QDialog,\
     QLineEdit,\
     QLabel,\
     QPushButton
-from PyQt5.QtCore import Qt
+from PyQt6.QtCore import Qt
 
 
 class NewFile(QDialog):
@@ -22,7 +22,7 @@ class NewFile(QDialog):
     def setup_ui(self):
         self.setWindowTitle("New File")
         self.resize(300, 80)
-        self.setWindowModality(Qt.ApplicationModal)
+        self.setWindowModality(Qt.WindowModality.ApplicationModal)
 
         main_lay = QVBoxLayout()
         lay1 = QHBoxLayout()

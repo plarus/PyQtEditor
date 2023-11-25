@@ -1,4 +1,4 @@
-from PyQt5.Qsci import QsciScintilla, \
+from PyQt6.Qsci import QsciScintilla, \
     QsciLexerMakefile,\
     QsciLexerBash, \
     QsciLexerCPP, \
@@ -23,7 +23,7 @@ from PyQt5.Qsci import QsciScintilla, \
     QsciLexerTeX, \
     QsciLexerXML, \
     QsciLexerYAML
-from PyQt5.QtGui import QFont
+from PyQt6.QtGui import QFont
 from .settings import Settings as S
 
 
@@ -162,7 +162,7 @@ class TextArea(QsciScintilla):
         self.setCaretLineBackgroundColor(S.CARET_LINE_BG_COLOR)
 
         # MARGIN #
-        self.setMarginType(0, self.NumberMargin)
+        self.setMarginType(0, self.MarginType.NumberMargin)
         self.set_margin_num_width()
         self.setMarginsBackgroundColor(S.MARGINS_BG_COLOR)
         if lang is not None:

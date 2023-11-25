@@ -1,6 +1,6 @@
 from os.path import split as split_pathname
 from os.path import exists as is_file_exists
-from PyQt5.QtWidgets import QMainWindow, QFileDialog, QMessageBox, QLabel
+from PyQt6.QtWidgets import QMainWindow, QFileDialog, QMessageBox, QLabel
 from .menu.menu_bar import MenuBar
 from .files_bar import FilesBar
 from .new_file import NewFile
@@ -93,7 +93,7 @@ class Editor(QMainWindow):
     def new_file(self):
         '''Open new file window and after that create new tab in files tabs'''
         dialog = NewFile(self)
-        dialog.exec_()
+        dialog.exec()
         if dialog.is_create_clicked():
             self.files_tabs.open_new_tab(dialog.name.text())
 

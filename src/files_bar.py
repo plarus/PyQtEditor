@@ -1,7 +1,7 @@
 from .text_area import TextArea
-from PyQt5.QtWidgets import QTabWidget
-from PyQt5.QtCore import pyqtSignal
-from PyQt5.QtGui import QIcon
+from PyQt6.QtWidgets import QTabWidget
+from PyQt6.QtCore import pyqtSignal
+from PyQt6.QtGui import QIcon
 
 
 class FilesBar(QTabWidget):

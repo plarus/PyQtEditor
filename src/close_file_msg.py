@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QMessageBox
+from PyQt6.QtWidgets import QMessageBox
 
 
 def ask_before_exit(parent, unsaved_file: bool = False):
@@ -16,8 +16,8 @@ def _question(parent, *, title="Message", message=""):
         parent,
         "Message",
         f"{message}Are you sure you want to quit?",
-        QMessageBox.Yes | QMessageBox.No,
-        QMessageBox.No
+        QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+        QMessageBox.StandardButton.No
     )
     return _change_answer_to_bool(retval)
 
@@ -28,4 +28,4 @@ def _change_answer_to_bool(answer):
     #
     # QMessageBox.No - QMessageBox.No = 0 return False
     # QMessageBox.No - QMessageBox.Yes = 49152 return True
-    return QMessageBox.No - answer == 49152
+    return QMessageBox.StandardButton.No - answer == 49152
