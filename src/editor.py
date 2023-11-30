@@ -152,7 +152,7 @@ class Editor(QMainWindow):
         is_saved = self.__save(file_name, data)
         if not is_saved:
             self.status_bar.showMessage("Error while saving "
-                                        f"\"{FILE_NAME}\"")
+                                        f"\"{file_name}\"")
         else:
             new_path, new_name = split_pathname(file_name)
             self.files_tabs.update_name(new_name)
